@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SweetAlert-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Clicks Rapidos</title>
-
+    
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         <H4 class="center">(Type the alphabet bello. When you press the first key, the timer will start running)</H4>
         <h4 class="center">Expected result "abcdefghijklmnopqrstuvwxyz"</h4>
         <div class="text-container">
-
+            
             <textarea class="abecedario" name="abecedario" id="abecedario" cols="100" rows="10">
             </textarea>
         </div>
@@ -27,8 +29,8 @@
             <button id="restart">restart</button>
         </div>
     </div>
-
-
+    
+    
     <div class="ball-container">
         <div class="ball"></div>
         <h3 class="title">CATCH and CLICK THE BALL</h3>
@@ -38,7 +40,8 @@
         Time: <span id="ballTimer">tiempo</span> <br>
         Clicks: <span id="ballClicks">0</span> <br>
     </div>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="app.js"></script>
     <script src="ball.js"></script>
 </body>

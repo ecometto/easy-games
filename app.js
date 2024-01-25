@@ -54,9 +54,26 @@ function startCountDown() {
 
 function verifyEnteredData(textboxValue){
     if(textboxValue === alphabet){
-        alert('El texto ingresado:\n ' + textboxValue + '\nEs CORRECTO')
+        showSweetAlert(textboxValue, seg, "CORRECTO")
     }
     else{
-        alert('El texto ingresado: \n ' + textboxValue + '\nEs INCORRECTO' )
+        showSweetAlert(textboxValue, seg, "INCORRECTO")
     }
 }
+
+function showSweetAlert(textboxValue, time, result) {
+    Swal.fire({
+      title: 'RESULTADO DEL JUEGO',
+    //   text: 'Este sirve para una sola linea. Si quiero mas de una linea, ver siguiente abajo',
+      html: `<p> El texto ingresado: <br> 
+                "<i>${textboxValue}</i>" <br><br> 
+                Es <b>${result}</b><br><br>
+                Tu tiempo fue de: <br>
+                ${time.toFixed(2)} segundos</p>`,
+      
+      icon: 'info',
+      position: 'center',
+      showConfirmButton: true,
+    //   timer: 3000  // Auto-close after 3 seconds
+    });
+  }
